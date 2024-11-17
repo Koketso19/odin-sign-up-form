@@ -8,3 +8,17 @@
     width: 800px;
     height: 800px;
 }
+
+.right{
+    
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.form-info{
+    
+    padding: 150px 200px 100px 40px;
+    font-style: italic;
+    background-color: aliceblue;
+
+}
