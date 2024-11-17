@@ -1,17 +1,29 @@
 body {
   font-family: "Oswald", sans-serif;
-  width: 100vw;
-  height:100vh;
-  overflow: hidden;
   display: flex;
   flex-direction: row;
-  background-color: white;
+  background-color:white;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    
+    
 }
 
 
 .left img{
     width: 800px;
     height: 800px;
+}
+
+.form{
+    overflow: auto;
+    width: 60;
+    margin: 0;
+    padding: 0;
+    margin-top: 5%;
 }
 
 .right{
@@ -26,4 +38,45 @@ body {
     font-style: italic;
     background-color: aliceblue;
 
+
+}
+.form-label{
+    font-weight: 900;
+    font-size: 20px;
+    display: block;
+    transition: all 0.5s;
+    transform: translateY(-3.4rem);
+}
+
+.form-input{
+    border: 2px solid gray ;
+    color: #333;
+    font-size: 1.2rem;
+    padding: 0.2rem 0.2rem;
+    border-radius: 0.2rem;
+    width: 100%;
+    display: block;
+    transition: all 0.5s;
+    margin-top: 5%;
+    padding-right: 10%;
+}
+
+.form-input:focus{
+    transition: 0.2s;
+    outline: none;
+    border: 2px solid blue;
+}
+
+.form-input:placeholder-show + .form-label{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+}
+.input > :last-child{
+    padding-left: 10px ;
 }
