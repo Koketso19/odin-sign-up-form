@@ -1,102 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="stylesheet.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <title>Sign in up form</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Create Account</title>
+  <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <div class=container>
-    <div class="left">
-        <img src="img-sign/tree.jpg">
-        by Lexi Laginess
-    </div>
-    <div class="form">
-
-
-        <div class="form-info">
-           <p> This is not a real online service! You know you need something
-            like this on your life to help you reaize your deepest dreams.</p>
-            <h3>Sign up now to get started.<br /><br />
-            </h3>
-
-            <h3>You know you want to.</h3>
-            
-
-        </div>
-
-        <div class="center">
-            <form action="">
-                <h1>Let's do this!</h1>
-                <div class="inputs">
-                    <div class="first-name">
-                        <input required type="text" 
-                        class="form-input" 
-                        id="first-name" 
-                        placeholder="First Name"/>
-                        <label for="first-name" class="form-lable">FIRST NAME:</label>
-                    </div>
-                    <div class="last-name">
-                        <input required type="text" 
-                        class="form-input" 
-                        id="last-name" 
-                        placeholder="Last Name"/>
-                        <label for="last-name" class="form-lable">Last Name:</label>
-                    </div>
+  <div class="form-container">
+    <div class="form-box">
+      <h2 id="form-title">Login</h2>
       
-                    </div>
-                    <div class="inputs">
-                        <div class="email">
-                            <input required type="email" 
-                            class="form-input" 
-                            id="email" 
-                            placeholder="Email"/>
-                            <label for="email" class="form-lable">Email:</label>
-                        </div>
-                        <div class="phone">
-                            <input required type="text" 
-                            class="form-input" 
-                            id="phone" 
-                            placeholder="phone"/>
-                            <label for="phone" class="form-lable">Phone:</label>
-                        </div>
-          
-                        </div>
-                        <div class="inputs">
-                            <div class="password">
-                                <input required type="text" 
-                                class="form-input" 
-                                id="password" 
-                                placeholder="Password"/>
-                                <label for="password" class="form-lable">Passord:</label>
-                            </div>
-                            <div class="confirm-password">
-                                <input required type="text" 
-                                class="form-input" 
-                                id="confirm-password" 
-                                placeholder="Confirm Password"/>
-                                <label for="confirm-password" class="form-lable">Confirm Password:</label>
-                            </div>
-              
-                            </div>
-                </div>
-            </form>
-
-           
-
+      <!-- Login Form -->
+      <form id="login-form" class="form" action="javascript:void(0);">
+        <div class="textbox">
+          <input type="text" id="username" placeholder="Username" required>
         </div>
+        <div class="textbox">
+          <input type="password" id="password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <p class="error-message" id="error-message"></p>
+      </form>
 
-       <div class="below">
-        <button>Create Account</button>
-            <P>Already have an account? Log in</P>
-       </div> 
+      <!-- Create Account Form -->
+      <form id="create-account-form" class="form hidden" action="javascript:void(0);">
+        <div class="textbox">
+          <input type="text" id="new-username" placeholder="Username" required>
+        </div>
+        <div class="textbox">
+          <input type="email" id="email" placeholder="Email" required>
+        </div>
+        <div class="textbox">
+          <input type="password" id="new-password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn">Create Account</button>
+        <p class="error-message" id="create-error-message"></p>
+      </form>
 
-
+      <!-- Toggle forms -->
+      <p id="toggle-link">Don't have an account? <a href="javascript:void(0);" id="toggle-form">Create one</a></p>
     </div>
-</div>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>

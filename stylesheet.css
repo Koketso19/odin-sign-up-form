@@ -1,82 +1,101 @@
-body {
-  font-family: "Oswald", sans-serif;
-  display: flex;
-  flex-direction: row;
-  background-color:white;
-}
-
-.container{
-    display: flex;
-    flex-direction: row;
-    
-    
-}
-
-
-.left img{
-    width: 800px;
-    height: 800px;
-}
-
-.form{
-    overflow: auto;
-    width: 60;
+/* General reset */
+* {
     margin: 0;
     padding: 0;
-    margin-top: 5%;
-}
-
-.right{
-    
-    justify-content: center;
-    justify-content: space-between;
-}
-
-.form-info{
-    
-    padding: 150px 200px 100px 40px;
-    font-style: italic;
-    background-color: aliceblue;
-
-
-}
-.form-label{
-    font-weight: 900;
-    font-size: 20px;
-    display: block;
-    transition: all 0.5s;
-    transform: translateY(-3.4rem);
-}
-
-.form-input{
-    border: 2px solid gray ;
-    color: #333;
-    font-size: 1.2rem;
-    padding: 0.2rem 0.2rem;
-    border-radius: 0.2rem;
-    width: 100%;
-    display: block;
-    transition: all 0.5s;
-    margin-top: 5%;
-    padding-right: 10%;
-}
-
-.form-input:focus{
-    transition: 0.2s;
-    outline: none;
-    border: 2px solid blue;
-}
-
-.form-input:placeholder-show + .form-label{
-    opacity: 0;
-    visibility: hidden;
-}
-
-.inputs{
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
     display: flex;
-    flex-direction: row;
-    width: 90%;
-}
-.input > :last-child{
-    padding-left: 10px ;
-}
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #00bcd4, #8e24aa);
+    color: #fff;
+  }
+  
+  /* Form container */
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Form box styling */
+  .form-box {
+    background-color: #fff;
+    padding: 40px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Form title */
+  #form-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Form fields styling */
+  .textbox {
+    margin-bottom: 20px;
+  }
+  
+  .textbox input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Button styling */
+  .btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #00bcd4;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #0288d1;
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  /* Toggle link for switching forms */
+  #toggle-link {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  #toggle-link a {
+    color: #0288d1;
+    text-decoration: none;
+  }
+  
+  #toggle-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hide elements when not needed */
+  .hidden {
+    display: none;
+  }
+  
